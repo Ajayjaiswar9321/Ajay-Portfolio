@@ -385,6 +385,78 @@ body {
         -webkit-backdrop-filter: none !important;
         background: rgba(13, 27, 42, 0.95) !important;
     }
+
+    /* Hide most 3D background shapes on mobile for performance */
+    .bg-3d-shapes {
+        display: none !important;
+    }
+
+    /* Keep only essential animations */
+    .cube-container {
+        transform: scale(0.7);
+    }
+}
+
+/* ==================== LOW-END DEVICE OPTIMIZATIONS (4GB RAM or less) ==================== */
+/* For users who prefer reduced motion - respects device settings */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .cube {
+        animation: none !important;
+        transform: rotateX(-20deg) rotateY(-30deg) !important;
+    }
+
+    .bg-3d-shapes,
+    .section-bg-3d {
+        display: none !important;
+    }
+}
+
+/* Extra small screens / very low-end devices */
+@media (max-width: 480px) {
+    /* Disable ALL background animations */
+    .bg-3d-shapes,
+    .section-bg-3d,
+    .floating-shape,
+    .dna-helix {
+        display: none !important;
+    }
+
+    /* Simpler cube */
+    .cube-container {
+        transform: scale(0.6);
+    }
+
+    .cube-face {
+        box-shadow: none !important;
+    }
+
+    .cube-face::before {
+        display: none !important;
+    }
+
+    /* Disable all pseudo-element animations */
+    *::before, *::after {
+        animation: none !important;
+    }
+
+    /* Simpler cards without shadows */
+    .skill-card,
+    .project-card,
+    .education-card,
+    .experience-card {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Disable hover transforms on mobile */
+    .skill-card:hover,
+    .project-card:hover {
+        transform: none !important;
+    }
 }
 
 ::selection {
