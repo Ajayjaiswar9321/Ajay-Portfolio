@@ -1,0 +1,321 @@
+# Portfolio Website Development Brief
+
+## 🎯 Project Overview
+
+Build a fully responsive, visually modern portfolio website using **HTML, CSS, and JavaScript** (vanilla - no frameworks).
+
+**Target:** Premium-level design with smooth animations, 3D elements, and professional micro-interactions.
+
+---
+
+## 👤 Profile Information
+
+| Field | Value |
+|-------|-------|
+| **Name** | Ajay Jaiswar |
+| **Role** | QA Analyst & Frontend Developer |
+| **Location** | Mumbai, India |
+| **Email** | ajayjaiswar6340@gmail.com |
+| **Phone** | +91 9321446340 |
+| **CV File** | `/assets/cv/Ajay_Jaiswar_CV.pdf` |
+
+---
+
+## 🎨 Design Language
+
+### Color Scheme
+- **Background:** Dark (charcoal or navy)
+- **Accent:** Electric Blue or Teal
+- **Text:** White / Light gray
+
+### Typography
+Choose from: `Poppins` | `Inter` | `Urbanist`
+
+### Style Keywords
+Sleek • Modern • Premium • Slightly Futuristic
+
+---
+
+## ✨ Animation Requirements
+
+### Button Hover Effects
+- Soft scale-up (1.05x)
+- Glow/outline transition
+- Smooth background gradient shift
+- Ripple effect on click
+
+### Card Hover Effects
+- Lift-up effect (translateY)
+- Shadow transition (intensify)
+- Slight 3D tilt (rotateX/Y)
+
+### Scroll Animations
+- Section-based reveal animations
+- Fade-up on scroll for timeline items
+
+---
+
+## 🧊 3D Element (Hero Section)
+
+**Required:** A 3D cube OR rotating card in the hero section
+
+### Features
+- Displays tech keywords on each face: `HTML` | `CSS` | `JavaScript` | `Testing`
+- Auto-rotate slow animation (continuous)
+- Simplified on mobile for performance
+
+### 3D Hover Animation (REQUIRED)
+
+```
+On Hover:
+├── Cube follows mouse position (tilt X + tilt Y)
+├── Rotation speed increases
+├── Cube scales up slightly (1.1x)
+├── Faces glow with accent color
+├── Shadow intensifies and spreads
+├── Smooth elastic transition
+└── Cube "pulls" toward cursor
+```
+
+| Property | Normal State | Hover State |
+|----------|--------------|-------------|
+| Rotation Speed | Slow (20s per rotation) | Fast (5s per rotation) |
+| Scale | 1.0 | 1.1 |
+| Shadow | Subtle | Intense glow |
+| Tilt | None | Follows mouse (±15°) |
+| Face Glow | None | Accent color border glow |
+
+### Mouse Interaction
+- Desktop: Cube tilts toward mouse cursor position
+- The closer the mouse, the more the cube reacts
+- Moving mouse around cube creates dynamic 3D effect
+
+---
+
+## 📑 Website Sections
+
+### 1. Navigation Bar
+- Sticky top navbar
+- **Logo Text: "Ajay"**
+- Smooth scroll to sections
+- Mobile: Hamburger menu with slide-down animation
+
+**Logo 3D Hover Animation (REQUIRED):**
+
+```
+On Hover:
+├── 3D tilt effect (rotateX + rotateY based on mouse position)
+├── Each letter lifts up with 3D depth/extrusion effect
+├── Accent color glow/shadow appears behind text
+├── Smooth transition (0.3s ease-out)
+└── Optional: Letters spread apart slightly in 3D space
+```
+
+| Property | Value |
+|----------|-------|
+| Transform | `perspective(500px) rotateX() rotateY()` |
+| Text Shadow | Multiple layered shadows for 3D depth |
+| Transition | Smooth 0.3s ease-out |
+| Effect | Letters appear to "pop out" of the screen |
+
+**Nav Links Hover:** Text scale + color change + underline reveal (left-to-right)
+
+---
+
+### 2. Hero Section
+
+**Content:**
+```
+Heading: "Hi, I'm Ajay Jaiswar"
+Subheading: "QA Analyst & Frontend Developer"
+Intro: "I combine quality assurance and development to build 
+        reliable, user-focused digital experiences."
+```
+
+**Buttons:**
+- Primary: "View My Projects" → scrolls to projects
+- Secondary: "Download CV" → downloads PDF
+
+---
+
+### 3. About Section
+
+**Content:** Clean paragraph about QA + Dev background
+
+**Mini-highlights Grid:**
+- 🎯 Experience
+- 📍 Location  
+- 💻 Technologies
+
+**Hover:** Cards expand + accent border + icon pop animation
+
+---
+
+### 4. Skills Section
+
+**Categories:**
+
+| QA & Testing | Tools & Methodologies | Development |
+|--------------|----------------------|-------------|
+| Manual Testing | JIRA | HTML5 |
+| API Testing | Agile/Scrum | CSS3 |
+| Regression Testing | Git | JavaScript |
+| Test Case Design | Postman | React Basics |
+
+**Hover:** Skill pills scale + gradient shift + subtle glow
+
+---
+
+### 5. Experience Section
+
+**Layout:** Animated vertical timeline
+
+**Job 1:**
+```
+Position: QA Analyst
+Company: AI NEXT STUDIO
+Location: Mumbai
+```
+
+**Job 2:**
+```
+Position: Software Developer & Tester
+Company: Bahar Infocons Pvt Ltd
+Location: Mumbai
+```
+
+**Animations:** Fade-up on scroll, card lift on hover, left-side line animation
+
+---
+
+### 6. Projects Section
+
+**Project 1: Food Taxi**
+- Type: Zomato Clone
+- Tech: HTML, CSS, JavaScript
+- Buttons: Live Demo | GitHub
+
+**Project 2: CLICKER**
+- Type: Camera Rental Website
+- Tech: HTML, CSS, JavaScript
+- Buttons: Live Demo | GitHub
+
+**Card Hover Effects:**
+- 3° tilt in 3D space
+- Shadow intensifies
+- Image zoom-in
+- Overlay gradient appears
+
+---
+
+### 7. Education Section
+
+**Layout:** Elegant cards with hover glow and border animation
+
+---
+
+### 8. Contact Section
+
+**Form Fields (all required):**
+- Full Name
+- Email (with pattern validation)
+- Subject
+- Message (min 20 characters)
+
+**Form Features:**
+- Inline validation
+- Error messages with fade-in animation
+- Success toast/modal on submit
+- Input focus: outline glow animation
+- Submit button: scale + glow + gradient shift
+
+**Contact Info Display:**
+- 📧 Email (clickable mailto link)
+- 📱 Phone number
+- 📍 Location
+
+---
+
+### 9. Footer
+
+```
+© 2025 Ajay Jaiswar. All rights reserved.
+```
+- Smooth fade animation on link hover
+
+---
+
+## 📁 File Structure
+
+```
+portfolio/
+├── index.html
+├── styles.css
+├── script.js
+└── assets/
+    ├── images/
+    │   ├── project1-thumb.jpg
+    │   └── project2-thumb.jpg
+    └── cv/
+        └── Ajay_Jaiswar_CV.pdf
+```
+
+---
+
+## 📚 Allowed Libraries
+
+✅ **Allowed (optional):**
+- AOS.js (scroll animations)
+- Anime.js or GSAP (3D/hover interactions)
+- Lightweight vanilla JS
+
+❌ **Not Allowed:**
+- React, Angular, Vue
+- Heavy UI frameworks (Bootstrap, Tailwind)
+
+---
+
+## 📱 Responsive Requirements
+
+### Desktop (>1024px)
+- 2-3 column layouts
+- Full 3D element with mouse tracking
+- All hover animations active
+
+### Tablet (768px - 1024px)
+- 2 column layouts
+- Simplified animations
+
+### Mobile (<768px)
+- Single column layout
+- Touch-friendly spacing (min 44px tap targets)
+- Simplified 3D (auto-rotate only)
+- Reduced animations for performance
+
+---
+
+## 📦 Deliverables
+
+1. `index.html` - Semantic, accessible markup
+2. `styles.css` - Clean, organized styles with CSS variables
+3. `script.js` - Modular, commented JavaScript
+
+### Code Comments Should Explain:
+- How to update personal details
+- How to change the CV file
+- How to add new projects
+- How to modify 3D element text
+
+---
+
+## 🎯 Quality Checklist
+
+- [ ] All sections present and functional
+- [ ] 3D element works on desktop
+- [ ] All hover animations smooth (60fps)
+- [ ] Form validation working
+- [ ] CV download functional
+- [ ] Mobile responsive
+- [ ] Cross-browser compatible
+- [ ] Clean, commented code
+- [ ] No console errors

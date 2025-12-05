@@ -1,0 +1,23 @@
+{
+  "name": "ajay-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Portfolio Website for Ajay Jaiswar - QA Analyst & Frontend Developer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "dev:3001": "PORT=3001 node server.js",
+    "dev:4000": "PORT=4000 node server.js",
+    "dev:5000": "PORT=5000 node server.js",
+    "vercel-build": "echo 'Build complete'"
+  },
+  "keywords": ["portfolio", "qa-analyst", "frontend-developer"],
+  "author": "Ajay Jaiswar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  }
+}

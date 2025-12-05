@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ajay Jaiswar - QA Analyst & Frontend Developer based in Mumbai, India. Specializing in quality assurance, manual testing, and modern web development.">
+    <meta name="keywords" content="QA Analyst, Frontend Developer, Web Developer, Mumbai, India, Testing, JavaScript, React">
+    <meta name="author" content="Ajay Jaiswar">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Ajay Jaiswar | QA Analyst & Frontend Developer">
+    <meta property="og:description" content="Building reliable, user-focused digital experiences through quality assurance and development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ajayjaiswar.com">
+
+    <title>Ajay Jaiswar | QA Analyst & Frontend Developer</title>
+
+    <!-- Google Fonts - Chakra Petch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ==========================================================
+         NAVIGATION BAR
+         - Sticky navigation with glassmorphism effect
+         - Logo with 3D hover animation
+         - Responsive hamburger menu for mobile
+         ========================================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo with 3D Hover Effect -->
+            <!-- HOW TO CHANGE LOGO: Edit the text inside the span elements below -->
+            <a href="#home" class="logo" aria-label="Ajay - Home">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-letter" data-letter="A">A</span><span class="logo-letter" data-letter="j">j</span><span class="logo-letter" data-letter="a">a</span><span class="logo-letter" data-letter="y">y</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            </div>
+    </nav>
+
+    <!-- ==========================================================
+         HERO SECTION
+         - Main introduction area
+         - 3D rotating cube with skills
+         - Call-to-action buttons
+         ========================================================== -->
+    <section class="hero" id="home">
+        <!-- Background Grid -->
+        <div class="hero-grid"></div>
+        <!-- Glowing Horizontal Line -->
+        <div class="hero-glow-line"></div>
+        <!-- 3D Floating Geometric Shapes -->
+        <div class="bg-3d-shapes">
+            <!-- Rotating Cubes -->
+            <div class="shape-3d cube-shape c1">
+                <div class="cube-3d">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+            <div class="shape-3d cube-shape c2">
+                <div class="cube-3d">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+            <div class="shape-3d cube-shape c3">
+                <div class="cube-3d">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+            <!-- Rotating Pyramids -->
+            <div class="shape-3d pyramid-shape p1">
+                <div class="pyramid-3d">
+                    <div class="pyramid-face f1"></div>
+                    <div class="pyramid-face f2"></div>
+                    <div class="pyramid-face f3"></div>
+                    <div class="pyramid-face f4"></div>
+                    <div class="pyramid-base"></div>
+                </div>
+            </div>
+            <div class="shape-3d pyramid-shape p2">
+                <div class="pyramid-3d">
+                    <div class="pyramid-face f1"></div>
+                    <div class="pyramid-face f2"></div>
+                    <div class="pyramid-face f3"></div>
+                    <div class="pyramid-face f4"></div>
+                    <div class="pyramid-base"></div>
+                </div>
+            </div>
+            <!-- Floating Rings -->
+            <div class="shape-3d ring-shape r1"></div>
+            <div class="shape-3d ring-shape r2"></div>
+            <div class="shape-3d ring-shape r3"></div>
+            <!-- Floating Spheres -->
+            <div class="shape-3d sphere-shape s1"></div>
+            <div class="shape-3d sphere-shape s2"></div>
+            <div class="shape-3d sphere-shape s3"></div>
+            <div class="shape-3d sphere-shape s4"></div>
+            <!-- DNA Helix -->
+            <div class="shape-3d dna-helix">
+                <div class="dna-strand strand1">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="dna-strand strand2">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Particles -->
+        <div class="hero-particles">
+            <span class="hero-particle hp1"></span>
+            <span class="hero-particle hp2"></span>
+            <span class="hero-particle hp3"></span>
+            <span class="hero-particle hp4"></span>
+            <span class="hero-particle hp5"></span>
+            <span class="hero-particle hp6"></span>
+            <span class="hero-particle hp7"></span>
+            <span class="hero-particle hp8"></span>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span> <br><span class="highlight">Ajay Jaiswar</span>
+                </h1>
+                <h2 class="hero-subtitle"><span class="subtitle-dot"></span><span class="typewriter-text" id="heroSubtitle"></span></h2>
+                <p class="hero-description">
+                    <span class="typewriter-text" id="heroDescription"></span>
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Projects</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <!-- HOW TO CHANGE CV: Update the href path to your CV file location -->
+                    <a href="/assets/cv/Ajay_Jaiswar_CV.pdf" class="btn btn-secondary" download>
+                        <span>Download CV</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Rotating Cube -->
+            <!-- HOW TO MODIFY CUBE TEXT: Edit the text inside each .cube-face span below -->
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cube-container" id="cubeContainer">
+                    <div class="cube" id="cube">
+                        <div class="cube-face cube-front"><span>HTML</span></div>
+                        <div class="cube-face cube-back"><span>CSS</span></div>
+                        <div class="cube-face cube-left"><span>Testing</span></div>
+                        <div class="cube-face cube-right"><span>JavaScript</span></div>
+                        <div class="cube-face cube-top"><span>QA</span></div>
+                        <div class="cube-face cube-bottom"><span>Dev</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         ABOUT SECTION
+         - Personal introduction
+         - Highlight cards with stats
+         ========================================================== -->
+    <section class="about" id="about">
+        <!-- 3D Background Elements -->
+        <div class="section-bg-3d about-bg-3d">
+            <div class="floating-box box1"></div>
+            <div class="floating-box box2"></div>
+            <div class="floating-box box3"></div>
+            <div class="orbit-ring or1"></div>
+            <div class="orbit-ring or2"></div>
+            <div class="code-bracket br1">&lt;/&gt;</div>
+            <div class="code-bracket br2">{}</div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+                    <p>
+                        I'm a passionate QA Analyst and Frontend Developer based in Mumbai, India.
+                        With a strong foundation in both quality assurance and web development,
+                        I bring a unique perspective to every project I work on.
+                    </p>
+                    <p>
+                        My journey in tech has equipped me with the skills to not only build
+                        beautiful, functional websites but also ensure they meet the highest
+                        standards of quality through rigorous testing methodologies.
+                    </p>
+                    <p>
+                        I believe in writing clean, maintainable code and delivering products
+                        that provide exceptional user experiences. When I'm not coding or testing,
+                        you'll find me exploring new technologies and staying updated with
+                        industry best practices.
+                    </p>
+                </div>
+
+                <!-- Highlight Cards -->
+                <div class="about-highlights" data-aos="fade-left" data-aos-delay="200">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-value">2+</span>
+                            <span class="highlight-label">Years Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-value">Mumbai</span>
+                            <span class="highlight-label">India</span>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <span class="highlight-value">10+</span>
+                            <span class="highlight-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         SKILLS SECTION
+         - Three-column grid layout
+         - Skill pills with hover effects
+         ========================================================== -->
+    <section class="skills" id="skills">
+        <!-- 3D Background Elements -->
+        <div class="section-bg-3d skills-bg-3d">
+            <div class="hex-grid">
+                <div class="hex h1"></div>
+                <div class="hex h2"></div>
+                <div class="hex h3"></div>
+                <div class="hex h4"></div>
+                <div class="hex h5"></div>
+            </div>
+            <div class="floating-gear gear1"></div>
+            <div class="floating-gear gear2"></div>
+            <div class="floating-gear gear3"></div>
+            <div class="circuit-line cl1"></div>
+            <div class="circuit-line cl2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">What I bring to the table</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- QA & Testing Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3>QA & Testing</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-pill">Manual Testing</span>
+                        <span class="skill-pill">API Testing</span>
+                        <span class="skill-pill">Regression Testing</span>
+                        <span class="skill-pill">Test Case Design</span>
+                        <span class="skill-pill">Bug Tracking</span>
+                        <span class="skill-pill">UAT</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Methodologies -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Tools & Methods</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-pill">JIRA</span>
+                        <span class="skill-pill">Postman</span>
+                        <span class="skill-pill">Git/GitHub</span>
+                        <span class="skill-pill">Agile/Scrum</span>
+                        <span class="skill-pill">Selenium Basics</span>
+                        <span class="skill-pill">VS Code</span>
+                    </div>
+                </div>
+
+                <!-- Development Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">React Basics</span>
+                        <span class="skill-pill">Responsive Design</span>
+                        <span class="skill-pill">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                                <path d="M2 2l7.586 7.586"/>
+                                <circle cx="11" cy="11" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">UI Design</span>
+                        <span class="skill-pill">UX Research</span>
+                        <span class="skill-pill">Wireframing</span>
+                        <span class="skill-pill">Prototyping</span>
+                        <span class="skill-pill">User Flows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         EXPERIENCE SECTION
+         - Vertical timeline layout
+         - Animated line on scroll
+         ========================================================== -->
+    <section class="experience" id="experience">
+        <!-- 3D Background Elements -->
+        <div class="section-bg-3d experience-bg-3d">
+            <div class="floating-diamond d1"></div>
+            <div class="floating-diamond d2"></div>
+            <div class="floating-diamond d3"></div>
+            <div class="wave-line wl1"></div>
+            <div class="wave-line wl2"></div>
+            <div class="floating-plus plus1">+</div>
+            <div class="floating-plus plus2">+</div>
+            <div class="floating-cross cross1"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Experience Item 1 -->
+                <!-- HOW TO UPDATE: Edit the content below to update your experience -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">QA Analyst</h3>
+                            <span class="timeline-company">AI NEXT STUDIO</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="timeline-location">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Mumbai, India
+                            </span>
+                            <span class="timeline-period">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                2024 - Present
+                            </span>
+                        </div>
+                        <ul class="timeline-responsibilities">
+                            <li>Conducted manual and automated testing for web applications</li>
+                            <li>Created comprehensive test cases and test plans</li>
+                            <li>Collaborated with development team to ensure quality standards</li>
+                            <li>Identified and tracked bugs using JIRA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Software Developer & Tester</h3>
+                            <span class="timeline-company">Bahar Infocons Pvt Ltd</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="timeline-location">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Mumbai, India
+                            </span>
+                            <span class="timeline-period">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                2023 - 2024
+                            </span>
+                        </div>
+                        <ul class="timeline-responsibilities">
+                            <li>Developed frontend features using HTML, CSS, and JavaScript</li>
+                            <li>Performed end-to-end testing for web applications</li>
+                            <li>Maintained code quality standards and best practices</li>
+                            <li>Participated in agile sprints and daily standups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         PROJECTS SECTION
+         - Grid layout for project cards
+         - 3D tilt effect on hover
+         ========================================================== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some things I've built</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <!-- HOW TO ADD NEW PROJECT: Copy this entire project-card div and update the content -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder project-3d-scene food-taxi-scene">
+                            <!-- 3D Food Delivery Animation -->
+                            <div class="food-delivery-3d">
+                                <!-- Floating Phone with App -->
+                                <div class="phone-3d">
+                                    <div class="phone-screen">
+                                        <div class="app-header"></div>
+                                        <div class="app-restaurant">
+                                            <div class="restaurant-img"></div>
+                                            <div class="restaurant-info">
+                                                <div class="info-line"></div>
+                                                <div class="info-line short"></div>
+                                            </div>
+                                        </div>
+                                        <div class="app-restaurant">
+                                            <div class="restaurant-img"></div>
+                                            <div class="restaurant-info">
+                                                <div class="info-line"></div>
+                                                <div class="info-line short"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Floating Food Items -->
+                                <div class="floating-food burger">
+                                    <div class="burger-top"></div>
+                                    <div class="burger-patty"></div>
+                                    <div class="burger-bottom"></div>
+                                </div>
+                                <div class="floating-food pizza">
+                                    <div class="pizza-slice"></div>
+                                </div>
+                                <div class="floating-food fries">
+                                    <div class="fries-box"></div>
+                                    <div class="fry f1"></div>
+                                    <div class="fry f2"></div>
+                                    <div class="fry f3"></div>
+                                </div>
+                                <!-- Delivery Scooter -->
+                                <div class="delivery-scooter">
+                                    <div class="scooter-body"></div>
+                                    <div class="scooter-box"></div>
+                                    <div class="scooter-wheel front"></div>
+                                    <div class="scooter-wheel back"></div>
+                                </div>
+                                <!-- Location Pins -->
+                                <div class="location-pin pin1">
+                                    <div class="pin-head"></div>
+                                    <div class="pin-point"></div>
+                                </div>
+                                <div class="location-pin pin2">
+                                    <div class="pin-head"></div>
+                                    <div class="pin-point"></div>
+                                </div>
+                                <!-- Dotted Route -->
+                                <svg class="route-line" viewBox="0 0 200 100">
+                                    <path d="M20,80 Q60,20 100,50 T180,30" stroke="url(#routeGradient)" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                                    <defs>
+                                        <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#00d4ff"/>
+                                            <stop offset="100%" style="stop-color:#00ffcc"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub Repository" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Food Taxi</h3>
+                        <span class="project-subtitle">Zomato Clone</span>
+                        <p class="project-description">
+                            A food delivery web application with restaurant listings,
+                            menu browsing, and cart functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder project-3d-scene clicker-scene">
+                            <!-- 3D Camera Rental Animation -->
+                            <div class="camera-rental-3d">
+                                <!-- Main DSLR Camera -->
+                                <div class="camera-3d">
+                                    <div class="camera-body">
+                                        <div class="camera-top">
+                                            <div class="flash-mount"></div>
+                                            <div class="mode-dial"></div>
+                                        </div>
+                                        <div class="camera-front">
+                                            <div class="lens-mount">
+                                                <div class="lens-outer"></div>
+                                                <div class="lens-inner"></div>
+                                                <div class="lens-glass"></div>
+                                            </div>
+                                            <div class="grip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Floating Lens -->
+                                <div class="floating-lens lens1">
+                                    <div class="lens-barrel"></div>
+                                    <div class="lens-element"></div>
+                                </div>
+                                <div class="floating-lens lens2">
+                                    <div class="lens-barrel small"></div>
+                                    <div class="lens-element small"></div>
+                                </div>
+                                <!-- Memory Cards -->
+                                <div class="memory-card card1"></div>
+                                <div class="memory-card card2"></div>
+                                <!-- Tripod -->
+                                <div class="tripod">
+                                    <div class="tripod-head"></div>
+                                    <div class="tripod-leg leg1"></div>
+                                    <div class="tripod-leg leg2"></div>
+                                    <div class="tripod-leg leg3"></div>
+                                </div>
+                                <!-- Focus Ring Animation -->
+                                <div class="focus-ring"></div>
+                                <!-- Aperture Blades -->
+                                <div class="aperture">
+                                    <div class="blade b1"></div>
+                                    <div class="blade b2"></div>
+                                    <div class="blade b3"></div>
+                                    <div class="blade b4"></div>
+                                    <div class="blade b5"></div>
+                                    <div class="blade b6"></div>
+                                </div>
+                                <!-- Shutter Effect -->
+                                <div class="shutter-flash"></div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub Repository" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">CLICKER</h3>
+                        <span class="project-subtitle">Camera Rental Website</span>
+                        <p class="project-description">
+                            A platform for renting professional camera equipment
+                            with booking and catalog features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         EDUCATION SECTION
+         - Elegant card layout
+         ========================================================== -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic background</p>
+            </div>
+
+            <div class="education-grid">
+                <!-- Education Card -->
+                <!-- HOW TO UPDATE: Edit the content below to update your education details -->
+                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Bachelor's Degree</h3>
+                        <span class="education-institution">Mumbai University</span>
+                        <div class="education-meta">
+                            <span class="education-location">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Mumbai, India
+                            </span>
+                            <span class="education-year">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                Graduation Year
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTACT SECTION
+         - Two-column layout: Form + Contact Info
+         - Form with validation
+         ========================================================== -->
+    <section class="contact" id="contact">
+        <!-- 3D Background Elements -->
+        <div class="section-bg-3d contact-bg-3d">
+            <div class="floating-envelope env1"></div>
+            <div class="floating-envelope env2"></div>
+            <div class="signal-wave sw1"></div>
+            <div class="signal-wave sw2"></div>
+            <div class="signal-wave sw3"></div>
+            <div class="at-symbol at1">@</div>
+            <div class="at-symbol at2">@</div>
+            <div class="connect-dots">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right" data-aos-delay="100">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-input"
+                                placeholder="John Doe"
+                                required
+                                minlength="2"
+                            >
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                placeholder="john@example.com"
+                                required
+                            >
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                class="form-input"
+                                placeholder="Project Inquiry"
+                                required
+                                minlength="3"
+                            >
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form-input form-textarea"
+                                placeholder="Tell me about your project..."
+                                required
+                                minlength="20"
+                                rows="5"
+                            ></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader"></span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <p class="contact-info-description">
+                        Feel free to reach out to me through any of the following channels.
+                        I'm always open to discussing new projects and opportunities.
+                    </p>
+
+                    <div class="contact-details">
+                        <!-- Email -->
+                        <!-- HOW TO CHANGE: Update the email address in the href and text -->
+                        <a href="mailto:ajayjaiswar6340@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">ajayjaiswar6340@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <!-- HOW TO CHANGE: Update the phone number in the href and text -->
+                        <a href="tel:+919321446340" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 9321446340</span>
+                            </div>
+                        </a>
+
+                        <!-- Location -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Mumbai, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         FOOTER
+         ========================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2025 Ajay Jaiswar. All rights reserved.
+                </p>
+                <a href="#home" class="back-to-top" title="Back to top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
