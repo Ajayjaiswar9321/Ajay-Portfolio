@@ -43,6 +43,20 @@ const CONFIG = {
     scrollOffset: 100
 };
 
+// Mobile detection
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+// Optimize for mobile
+if (isMobile) {
+    // Disable smooth scroll behavior for better performance
+    document.documentElement.style.scrollBehavior = 'auto';
+
+    // Use passive event listeners for better scroll performance
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+    document.addEventListener('scroll', function() {}, { passive: true });
+}
+
 // ==========================================================
 // 2. NAVIGATION
 // ==========================================================
@@ -192,6 +206,12 @@ const CubeController = {
 
     init() {
         if (!DOM.cube || !DOM.cubeContainer) return;
+
+        // On mobile, use simpler CSS animation instead of JS
+        if (isMobile) {
+            DOM.cube.style.animation = 'cubeRotate 15s linear infinite';
+            return; // Skip heavy JS animations on mobile
+        }
 
         this.setupMouseTracking();
         this.setupTouchInteraction();

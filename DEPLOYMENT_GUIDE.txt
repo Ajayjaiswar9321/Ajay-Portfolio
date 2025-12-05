@@ -1,0 +1,159 @@
+════════════════════════════════════════════════════════════════════════════════
+                    AJAY JAISWAR - PORTFOLIO DEPLOYMENT GUIDE
+════════════════════════════════════════════════════════════════════════════════
+
+Created: December 6, 2025
+Portfolio: Ajay Jaiswar - QA Analyst & Frontend Developer
+
+════════════════════════════════════════════════════════════════════════════════
+                              GITHUB REPOSITORY
+════════════════════════════════════════════════════════════════════════════════
+
+Repository URL: https://github.com/Ajayjaiswar9321/Ajay-Portfolio
+Branch: main
+
+To push future updates:
+    git add .
+    git commit -m "Your commit message"
+    git push origin main
+
+════════════════════════════════════════════════════════════════════════════════
+                           VERCEL DEPLOYMENT STEPS
+════════════════════════════════════════════════════════════════════════════════
+
+1. Go to: https://vercel.com/new
+
+2. Click "Import Git Repository"
+
+3. Select: Ajayjaiswar9321/Ajay-Portfolio
+
+4. Configure Project Settings:
+   - Framework Preset: Other
+   - Root Directory: ./
+
+5. Environment Variables (click "+ Add More" for each):
+
+   ┌─────────────────┬─────────────────────────────────┐
+   │ Key             │ Value                           │
+   ├─────────────────┼─────────────────────────────────┤
+   │ EMAIL_USER      │ ajayjaiswar6340@gmail.com       │
+   │ EMAIL_TO        │ ajayjaiswar6340@gmail.com       │
+   │ EMAIL_PASS      │ (your Google App Password)      │
+   └─────────────────┴─────────────────────────────────┘
+
+6. Click "Deploy"
+
+7. Your site will be live at: https://ajay-portfolio-xxx.vercel.app
+
+════════════════════════════════════════════════════════════════════════════════
+                        GOOGLE APP PASSWORD SETUP
+════════════════════════════════════════════════════════════════════════════════
+
+To receive contact form emails at your Gmail:
+
+1. Enable 2-Step Verification:
+   - Go to: https://myaccount.google.com/security
+   - Turn on "2-Step Verification"
+
+2. Generate App Password:
+   - Go to: https://myaccount.google.com/apppasswords
+   - Select App: Mail
+   - Select Device: Other (type "Portfolio")
+   - Click "Generate"
+   - Copy the 16-character password (like: abcd efgh ijkl mnop)
+
+3. Add to Vercel:
+   - Go to your Vercel project settings
+   - Environment Variables
+   - Update EMAIL_PASS with your 16-character App Password
+   - Redeploy
+
+════════════════════════════════════════════════════════════════════════════════
+                         TEST EMAIL SERVICE (ETHEREAL)
+════════════════════════════════════════════════════════════════════════════════
+
+For testing without Gmail setup:
+
+Website: https://ethereal.email
+
+Current Test Credentials (changes each server restart):
+- Login: llzntnpbz6z72zkr@ethereal.email
+- Password: aamrypqX1aMtQ2YMSE
+
+How to use:
+1. Submit contact form on your portfolio
+2. Go to https://ethereal.email
+3. Login with credentials above
+4. View the test email in Messages
+
+════════════════════════════════════════════════════════════════════════════════
+                            LOCAL DEVELOPMENT
+════════════════════════════════════════════════════════════════════════════════
+
+To run locally:
+
+1. Install dependencies:
+   npm install
+
+2. Start server:
+   npm start
+   OR
+   node server.js
+
+3. Open browser:
+   http://localhost:3001
+
+════════════════════════════════════════════════════════════════════════════════
+                              PROJECT FILES
+════════════════════════════════════════════════════════════════════════════════
+
+Main Files:
+- index.html          → Main HTML page
+- styles.css          → All CSS styles and animations
+- script.js           → JavaScript functionality
+- server.js           → Local Express server
+
+API Files (for Vercel):
+- api/contact.js      → Contact form API endpoint
+- api/health.js       → Health check API endpoint
+
+Config Files:
+- vercel.json         → Vercel deployment config
+- package.json        → Node.js dependencies
+- .env                → Local environment variables (not pushed to GitHub)
+- .gitignore          → Files to ignore in git
+
+════════════════════════════════════════════════════════════════════════════════
+                           CONTACT FORM SUBMISSIONS
+════════════════════════════════════════════════════════════════════════════════
+
+Local submissions are saved to:
+- File: contact_submissions.txt (in PORTFOLIO folder)
+
+On Vercel (production):
+- Emails sent to your Gmail (if App Password configured)
+- Or captured by Ethereal test service
+
+════════════════════════════════════════════════════════════════════════════════
+                              USEFUL COMMANDS
+════════════════════════════════════════════════════════════════════════════════
+
+# Check git status
+git status
+
+# Push changes to GitHub
+git add .
+git commit -m "Update message"
+git push origin main
+
+# Vercel will auto-deploy when you push to GitHub!
+
+════════════════════════════════════════════════════════════════════════════════
+                                SUPPORT
+════════════════════════════════════════════════════════════════════════════════
+
+GitHub Repo: https://github.com/Ajayjaiswar9321/Ajay-Portfolio
+Vercel Docs: https://vercel.com/docs
+Nodemailer:  https://nodemailer.com
+
+════════════════════════════════════════════════════════════════════════════════

@@ -352,6 +352,41 @@ body {
     perspective-origin: 50% 50%;
 }
 
+/* ==================== MOBILE PERFORMANCE OPTIMIZATIONS ==================== */
+@media (max-width: 768px) {
+    html {
+        scroll-behavior: auto; /* Disable smooth scroll on mobile for better performance */
+    }
+
+    body {
+        perspective: none; /* Disable 3D perspective on mobile */
+        -webkit-overflow-scrolling: touch; /* Smooth native scrolling on iOS */
+        touch-action: manipulation; /* Faster touch response */
+    }
+
+    /* Force GPU acceleration for main scrollable content */
+    main, section {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
+    /* Reduce animation complexity on mobile */
+    *, *::before, *::after {
+        animation-duration: 0.5s !important;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Disable heavy backdrop filters on mobile */
+    .glass-card,
+    .navbar,
+    .skill-card,
+    .project-card {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(13, 27, 42, 0.95) !important;
+    }
+}
+
 ::selection {
     background: var(--accent-primary);
     color: var(--bg-primary);
