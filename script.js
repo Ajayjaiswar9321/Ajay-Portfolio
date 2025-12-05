@@ -46,63 +46,6 @@ const CONFIG = {
 // Mobile detection
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
-// Low-end device detection (4GB RAM or less)
-const isLowEndDevice = (() => {
-    // Check device memory if available (in GB)
-    if (navigator.deviceMemory && navigator.deviceMemory <= 4) return true;
-
-    // Check hardware concurrency (CPU cores)
-    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) return true;
-
-    // Check if user prefers reduced motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
-
-    // Small screen devices are likely low-end
-    if (window.innerWidth <= 480) return true;
-
-    return false;
-})();
-
-// Optimize for mobile
-if (isMobile) {
-    // Disable smooth scroll behavior for better performance
-    document.documentElement.style.scrollBehavior = 'auto';
-
-    // Use passive event listeners for better scroll performance
-    document.addEventListener('touchstart', function() {}, { passive: true });
-    document.addEventListener('touchmove', function() {}, { passive: true });
-    document.addEventListener('scroll', function() {}, { passive: true });
-}
-
-// Extra optimizations for low-end devices
-if (isLowEndDevice) {
-    // Add class to body for CSS targeting
-    document.body.classList.add('low-end-device');
-
-    // Remove all background 3D shapes
-    document.querySelectorAll('.bg-3d-shapes, .section-bg-3d, .floating-shape').forEach(el => {
-        el.style.display = 'none';
-    });
-
-    // Disable all CSS animations
-    const style = document.createElement('style');
-    style.textContent = `
-        .low-end-device *,
-        .low-end-device *::before,
-        .low-end-device *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-        .low-end-device .cube {
-            animation: none !important;
-        }
-    `;
-    document.head.appendChild(style);
-
-    console.log('Low-end device detected - animations disabled for better performance');
-}
-
 // ==========================================================
 // 2. NAVIGATION
 // ==========================================================
@@ -252,12 +195,6 @@ const CubeController = {
 
     init() {
         if (!DOM.cube || !DOM.cubeContainer) return;
-
-        // On mobile, use simpler CSS animation instead of JS
-        if (isMobile) {
-            DOM.cube.style.animation = 'cubeRotate 15s linear infinite';
-            return; // Skip heavy JS animations on mobile
-        }
 
         this.setupMouseTracking();
         this.setupTouchInteraction();
